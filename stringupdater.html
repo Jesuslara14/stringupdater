@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update String</title>
+</head>
+<body>
+    <div>
+        <h2>Convert to lowercase</h2>
+        <div id="outputLow"></div>
+        <button id="inputLow" onclick="low()">Convert</button>
+        <h2>Convert to uppercase</h2>
+        <div id="outputUp"></div>
+        <button id="inputUp" onclick="up()">Convert</button>
+    </div>
+    <script>
+        var outputLow = document.getElementById("outputLow");
+        var outputUp = document.getElementById("outputUp");
+
+        var arr = ["Dog", "Cat", "Bird", "Frog", "Sheep"];
+        outputLow.innerHTML = arr;
+        outputUp.innerHTML = arr;
+
+        function low(){
+            outputLow.innerHTML = arr.map(x => x.toLowerCase())
+        }
+
+        function up(){
+            outputUp.innerHTML = arr.map(x => x.toUpperCase())
+        }
+    </script>
+</body>
+</html>
